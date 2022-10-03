@@ -26,7 +26,6 @@ puts mashrur
 mashrur.first_name = "Mashrur"
 mashrur.last_name = "Hossain"
 mashrur.email = "mashrur.example.com"
-mashrur.username = "mashrur1"
 
 puts mashrur.first_name
 puts mashrur.last_name
