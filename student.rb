@@ -16,6 +16,10 @@ class Student
   #   @first_name
   # end
 
+  def set_username
+    @username = "Hossain"
+  end
+
   def to_s
     "First name: #{@first_name}"
   end
@@ -26,7 +30,7 @@ puts mashrur
 mashrur.first_name = "Mashrur"
 mashrur.last_name = "Hossain"
 mashrur.email = "mashrur.example.com"
-
+mashrur.set_username
 puts mashrur.first_name
 puts mashrur.last_name
 puts mashrur.email
