@@ -16,7 +16,7 @@ class Student
   end
 
   def to_s
-    "First name: #{@first_name}"
+    "First name: #{@first_name}, Last name: #{@last_name}, Username: #{@username}, Email: #{@email}"
   end
 end
 
@@ -26,3 +26,6 @@ john = Student.new("John", "Doe", "john1", "john@example.com", "password2")
 
 puts mashrur
 puts john
+mashrur.last_name = john.last_name
+puts "Mashrur is altered"
+puts mashrur
