@@ -1,10 +1,11 @@
 class Student
-  attr_accessor :first_name, :last_name, :email, :username
+  attr_accessor :first_name, :last_name, :email
+  attr_reader :username
 
   @first_name
   @last_name
   @email
-  @username
+  @username = "mashrur1"
   @password
   
   # def first_name=(name)
