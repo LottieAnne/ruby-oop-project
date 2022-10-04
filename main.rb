@@ -1,24 +1,12 @@
-require 'bundler/inline'
+require_relative 'crud'
 
-gemfile true do
-  source 'http://rubygems.org'
-  gem 'bcrypt'
-end
+users = [
+          { username: "mashrur", password: "password1" },
+          { username: "jack", password: "password2" },
+          { username: "arya", password: "password3" },
+          { username: "jonshow", password: "password4" },
+          { username: "heisenberg", password: "password5" }
+        ]
 
-require 'bcrypt'
-
-my_password = BCrypt::Password.create("my password")
-my_password_1 = BCrypt::Password.create("my password")
-my_password_2 = BCrypt::Password.create("my password")
-
-puts my_password
-puts my_password_1
-puts my_password_2
-
-puts my_password == "my password"
-
-
-# my_password = BCrypt::Password.new("$2a$12$abO.kdHpZBjppeYydh9TJegvlRC6Pd8mZcCyaSs2JltzYKy4iW0O6")
-# puts my_password == "my password"     #=> true
-# my_password == "not my password" #=> false
-
+hashed_users = Crud.create_secure_users(users)
+puts hashed_users
